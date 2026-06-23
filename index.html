@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aux Sources de l'Être | Accueil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lora:italic,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Lora', serif;
+            background-color: #000;
+            color: white;
+        }
+
+        .fond-site {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('arriere_plan.jpg');
+            min-height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* TITRE PRINCIPAL */
+        h1 {
+            font-family: "Tempus Sans ITC", "Tempus Sans", cursive, sans-serif;
+            font-weight: 400;
+            font-size: 4rem;
+            margin-bottom: 4rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            text-transform: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.1);
+            color: #f3f3f3;
+        }
+
+        /* TITRES DES EN-TÊTES */
+        h2 {
+            font-family: "Tempus Sans ITC", "Tempus Sans", cursive, sans-serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin: 0;
+            text-align: center;
+            letter-spacing: 0.1rem;
+            text-transform: none;
+            color: #f3f3f3;
+            line-height: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        /* STYLE POUR LES SOUS-TITRES / DESCRIPTIONS */
+        .subtitle {
+            display: block;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            opacity: 0.85;
+            margin-top: 0.5rem;
+            letter-spacing: 0;
+        }
+
+        /* CONFIGURATION DE LA GRILLE HORIZONTALE ET VERTICALE */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes égales */
+            gap: 1.5rem 2rem; /* Écart régulier entre les boutons */
+            width: 95%;
+            max-width: 1200px;
+            flex-grow: 1;
+            align-items: center;
+        }
+
+        /* Alignement centré de chaque bouton dans sa case */
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* BOUTONS RESTYLISÉS À TAILLE IDENTIQUE */
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 0.8rem 1rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 280px; 
+            height: 60px; 
+            font-size: 0.85rem;
+            background-color: rgba(30, 30, 30, 0.6);
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            
+            box-shadow: 
+                4px 4px 8px rgba(0, 0, 0, 0.8),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+                inset -1px -1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-outline span {
+            display: inline-block;
+            transform: scaleY(1.6);
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: 'Cinzel', serif;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #1c1917;
+            transform: translateY(-2px);
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
+        }
+
+        .footer-copyright {
+            margin-top: 4rem;
+            padding-bottom: 1rem;
+            font-size: 0.7rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.1rem;
+            opacity: 0.7;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* COMPORTEMENT MOBILE RESPONSIVE SÉCURISÉ */
+        @media (max-width: 950px) {
+            .grid-container { 
+                grid-template-columns: 1fr; 
+                gap: 1.5rem;
+            }
+            h1 { font-size: 2.8rem; margin-bottom: 3rem; }
+            h2 { font-size: 2.2rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+            .subtitle { font-size: 1rem; }
+            .btn-outline { width: 90%; height: 55px; }
+            .grid-item-header { order: calc(var(--col) * 10); }
+            .grid-item-b1 { order: calc(var(--col) * 10 + 1); }
+            .grid-item-b2 { order: calc(var(--col) * 10 + 2); }
+            .grid-item-b3 { order: calc(var(--col) * 10 + 3); }
+            .grid-item-b4 { order: calc(var(--col) * 10 + 4); }
+            .empty-space { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fond-site">
+        <h1>Aux Sources de l'Être By J&S</h1>
+
+        <div class="grid-container">
+            
+            <div class="grid-item-header" style="--col: 1;">
+                <h2>By Julie <span class="subtitle">Énergéticienne, coach en méditation, Accompagnante en bien-être professionnel</span></h2>
+            </div>
+            <div class="grid-item-header" style="--col: 2;">
+                <h2></h2>
+            </div>
+            <div class="grid-item-header" style="--col: 3;">
+                <h2>By Serge <span class="subtitle">Énergéticien, Fabricant d'outils de Radiesthésie, Géobiologue</span></h2>
+            </div>
+
+            <div class="grid-item grid-item-b1" style="--col: 1;">
+                <a href="quisuisje_j.html" class="btn-outline"><span>Qui suis-je?</span></a>
+            </div>
+            <div class="grid-item grid-item-b1" style="--col: 2;">
+                <a href="soins.html" class="btn-outline"><span>Soins Énergétiques</span></a>
+            </div>
+            <div class="grid-item grid-item-b1" style="--col: 3;">
+                <a href="presentation_s.html" class="btn-outline"><span>Qui suis-je?</span></a>
+            </div>
+
+            <div class="grid-item grid-item-b2" style="--col: 1;">
+                <a href="accompagnementaubienetreautravail.html" class="btn-outline"><span>Accompagnement au bien-être au travail</span></a>
+            </div>
+            <div class="grid-item grid-item-b2" style="--col: 2;">
+                <a href="contact.html" class="btn-outline"><span>Contact</span></a>
+            </div>
+            <div class="grid-item grid-item-b2" style="--col: 3;">
+                <a href="page_S.html" class="btn-outline"><span>Outils-ateliers<br>de Radiesthésie</span></a>
+            </div>
+
+            <div class="grid-item grid-item-b3" style="--col: 1;">
+                <a href="oracle.html" class="btn-outline"><span>Oracle</span></a>
+            </div>
+            <div class="grid-item grid-item-b3" style="--col: 2;">
+                <a href="deontologie.html" class="btn-outline"><span>Déontologie</span></a>
+            </div>
+            <div class="grid-item grid-item-b3" style="--col: 3;">
+                <a href="géobiologie.html" class="btn-outline"><span>Géobiologie</span></a>
+            </div>
+
+            <div class="grid-item grid-item-b4" style="--col: 1;">
+                <a href="meditation.html" class="btn-outline"><span>Méditation</span></a>
+            </div>
+            <div class="grid-item grid-item-b4" style="--col: 2;"></div>
+            <div class="grid-item grid-item-b4" style="--col: 3;"></div>
+
+        </div>
+
+        <div class="footer-copyright">
+            &copy; 2026 AUX SOURCES DE L'ETRE BY J&S
+        </div>
+    </div>
+
+</body>
+</html>

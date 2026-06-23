@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendules en Bois | Aux Sources de l'être</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:italic,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3 { font-family: 'Cinzel', serif; }
+        body { font-family: 'Lora', serif; }
+
+        /* Style du bouton Accueil spécifique à la navigation claire */
+        .btn-accueil-nav {
+            border: 1px solid #134e4a; /* emerald-900 */
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            color: #134e4a;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-accueil-nav span {
+            display: inline-block;
+            transform: scaleY(1.8);
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+
+        .btn-accueil-nav:hover {
+            background-color: #134e4a;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-[#fcfaf7] text-stone-800">
+
+    <nav class="p-6 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50">
+        <a href="index.html" class="text-lg font-bold tracking-[0.2em] text-emerald-900 uppercase">Aux Sources de l'être</a>
+        
+        <a href="index.html" class="btn-accueil-nav">
+            <span>Accueil</span>
+        </a>
+    </nav>
+
+    <header class="py-16 text-center bg-[#f5f2ee]">
+        <h1 class="text-4xl text-stone-700 tracking-widest uppercase mb-4">Pendules Artisanaux</h1>
+        <p class="italic text-stone-500">Chaque essence de bois offre une vibration unique pour vos recherches.</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16">
+        <div id="galerie-pendules" class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            </div>
+    </main>
+
+    <footer class="py-12 text-center text-stone-400 text-[10px] tracking-widest uppercase">
+        © 2026 Aux Sources de l'être by J&S
+    </footer>
+
+    <script>
+        const conteneur = document.getElementById('galerie-pendules');
+        const extension = 'jpg'; 
+
+        // Liste des prix
+        const listePrix = [
+            "40,00 €", "45,00 €", "40,00 €", "45,00 €", "35,00 €",
+            "45,00 €", "40,00 €", "30,00 €", "30,00 €", "30,00 €",
+            "30,00 €", "35,00 €", "40,00 €", "40,00 €", "45,00 €",
+            "50,00 €", "40,00 €"
+        ];
+
+        listePrix.forEach((prix, index) => {
+            const numero = index + 1;
+            const card = document.createElement('div');
+            card.className = "bg-white p-4 shadow-sm border border-stone-100 rounded-sm group";
+
+            card.innerHTML = `
+                <div class="aspect-square overflow-hidden bg-stone-50 mb-4">
+                    <img src="images/Pendule_${numero}.${extension}" 
+                         alt="Pendule artisanal n°${numero}" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <h3 class="text-xl font-bold uppercase tracking-tighter text-stone-700">Pendule N°${numero}</h3>
+                <p class="text-sm text-stone-500 italic mb-4">Pièce artisanale unique</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-emerald-800 font-bold">${prix}</span>
+                    <a href="contact.html?ref=${numero}" class="text-xs border border-emerald-800 text-emerald-800 px-4 py-2 hover:bg-emerald-800 hover:text-white transition uppercase">Commander</a>
+                </div>
+            `;
+
+            conteneur.appendChild(card);
+        });
+    </script>
+</body>
+</html>

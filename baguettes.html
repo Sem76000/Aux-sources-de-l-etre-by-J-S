@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baguettes Artisanales | Aux Sources de l'être</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:italic,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3 { font-family: 'Cinzel', serif; }
+        body { font-family: 'Lora', serif; }
+        .product-card:hover img { transform: scale(1.05); transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        .btn-accueil-nav {
+            border: 1px solid #064e3b; 
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            color: #064e3b;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-accueil-nav span {
+            display: inline-block;
+            transform: scaleY(1.8);
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+
+        .btn-accueil-nav:hover {
+            background-color: #064e3b;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-[#fdfcfb] text-stone-800">
+
+    <nav class="p-6 border-b border-stone-200 flex justify-between items-center bg-white sticky top-0 z-50">
+        <a href="index.html" class="text-lg font-bold tracking-[0.2em] text-emerald-900 uppercase">Aux Sources de l'être</a>
+        
+        <a href="index.html" class="btn-accueil-nav">
+            <span>Accueil</span>
+        </a>
+    </nav>
+
+    <header class="py-16 bg-stone-100 text-center">
+        <h1 class="text-4xl md:text-5xl text-stone-700 tracking-widest uppercase mb-4">Baguettes de Radiesthésie</h1>
+        <p class="italic text-stone-500 max-w-2xl mx-auto px-4">Façonnées dans des bois conducteurs comme le noisetier ou le saule, pour une détection sensible et précise.</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            
+            <div class="bg-white p-4 shadow-sm border border-stone-100 rounded-sm group product-card">
+                <div class="overflow-hidden bg-stone-50 mb-4">
+                    <img src="Baguettes_1.jpg" alt="Baguettes de Radiesthésie n°1" class="w-full h-auto block transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <h3 class="text-xl font-bold uppercase tracking-tighter text-stone-700">Baguettes de Radiesthésie n°1</h3>
+                <p class="text-sm text-stone-500 italic mb-4">Manches en Hêtre et L en aluminium</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-emerald-800 font-bold">50,00 €</span>
+                    <a href="contact.html?ref=Commande des baguettes n°1" class="text-xs border border-emerald-800 text-emerald-800 px-4 py-2 hover:bg-emerald-800 hover:text-white transition uppercase">Commander</a>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 shadow-sm border border-stone-100 rounded-sm group product-card">
+                <div class="overflow-hidden bg-stone-50 mb-4">
+                    <img src="https://images.unsplash.com/photo-1501183007986-d0d080b147f9?auto=format&fit=crop&w=1200&q=80" alt="Baguettes de Radiesthésie n°2" class="w-full h-auto block transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <h3 class="text-xl font-bold uppercase tracking-tighter text-stone-700">Baguettes de Radiesthésie n°2</h3>
+                <p class="text-sm text-stone-500 italic mb-4">Saule pleureur et fil d'argent</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-emerald-800 font-bold">45,00 €</span>
+                    <a href="contact.html?ref=Commande des baguettes n°2" class="text-xs border border-emerald-800 text-emerald-800 px-4 py-2 hover:bg-emerald-800 hover:text-white transition uppercase">Commander</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 text-center text-stone-400 text-[10px] tracking-widest uppercase">
+        © 2026 Aux Sources de l'être by J&S
+</body>
+</html>

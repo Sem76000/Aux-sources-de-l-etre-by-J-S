@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aux Sources de l'être | Ateliers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lora:italic,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3 { font-family: 'Cinzel', serif; }
+        body { font-family: 'Lora', serif; }
+        
+        .bg-nature { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1920&q=80'); 
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .btn-accueil {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 50;
+            border: 1px solid white;
+            padding: 0.6rem 1.2rem;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-accueil span {
+            display: inline-block;
+            transform: scaleY(1.8);
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .btn-accueil:hover {
+            background-color: white;
+            color: #1c1917;
+        }
+
+        .date-card {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .date-card:hover {
+            border-color: white;
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-reserve {
+            border: 1px solid white;
+            padding: 0.8rem 1.5rem;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            transition: all 0.4s ease;
+            display: inline-block;
+        }
+
+        .btn-reserve:hover {
+            background: white;
+            color: #1c1917;
+        }
+
+        .title-stretch {
+            display: inline-block;
+            transform: scaleY(1.5);
+            letter-spacing: 0.2em;
+        }
+    </style>
+</head>
+<body class="bg-stone-900 text-white min-h-screen">
+
+    <a href="index.html" class="btn-accueil">
+        <span>Accueil</span>
+    </a>
+
+    <section class="bg-nature min-h-screen flex flex-col items-center py-20 px-4">
+        
+        <div class="text-center mb-16 mt-12 md:mt-0">
+            <h2 class="text-4xl md:text-6xl mb-6 font-bold uppercase tracking-widest">
+                <span class="title-stretch">Initiation aux pendules</span>
+            </h2>
+            <div class="h-px w-24 bg-white/30 mx-auto mb-8"></div>
+            <p class="text-xl italic opacity-80 max-w-2xl mx-auto">
+                Apprenez à écouter votre intuition et à maîtriser l'art du pendule lors de nos prochaines rencontres.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+            
+            <div class="date-card p-8 flex flex-col items-center text-center">
+                <span class="uppercase tracking-[0.4em] text-xs mb-4 opacity-50">Septembre 2026</span>
+                <h3 class="text-2xl mb-6 tracking-wide">Vendredi 25 Septembre</h3>
+                <a href="contact.html?type=Initiation aux pendules&date=Vendredi 25 Septembre 2026" class="btn-reserve">Réserver ma place</a>
+            </div>
+
+            <div class="date-card p-8 flex flex-col items-center text-center">
+                <span class="uppercase tracking-[0.4em] text-xs mb-4 opacity-50">Septembre 2026</span>
+                <h3 class="text-2xl mb-6 tracking-wide">Dimanche 27 Septembre</h3>
+                <a href="contact.html?type=Initiation aux pendules&date=Dimanche 27 Septembre 2026" class="btn-reserve">Réserver ma place</a>
+            </div>
+
+            <div class="date-card p-8 flex flex-col items-center text-center">
+                <span class="uppercase tracking-[0.4em] text-xs mb-4 opacity-50">Octobre 2026</span>
+                <h3 class="text-2xl mb-6 tracking-wide">Dimanche 4 Octobre</h3>
+                <a href="contact.html?type=Initiation aux pendules&date=Dimanche 4 Octobre 2026" class="btn-reserve">Réserver ma place</a>
+            </div>
+
+           
+
+        </div>
+
+        <p class="mt-20 text-sm opacity-40 uppercase tracking-[0.2em] text-center">
+            Places limitées • Inscription obligatoire via le formulaire
+        </p>
+
+    </section>
+
+    <footer class="py-8 bg-stone-950/80 text-center text-white/30 text-[10px] tracking-[0.5em] uppercase">
+        © 2026 Aux Sources de l'être by J&S
+    </footer>
+
+</body>
+</html>

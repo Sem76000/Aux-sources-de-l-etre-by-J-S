@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Oracle | By J</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lora:italic,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles issus de index.html */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%; 
+            font-family: 'Lora', serif; 
+            color: #000000; /* Texte général en noir */
+        }
+        
+        .fond-site {
+            background-image: url('Fond_Julie.jpg'); /* Aucun filtre noir sur l'image */
+            min-height: 100vh; 
+            width: 100%; 
+            background-size: cover; 
+            background-position: center;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding: 4rem 1rem; 
+            box-sizing: border-box;
+            justify-content: flex-start; /* Aligne le contenu en haut */
+        }
+
+        /* TITRE MODIFIÉ EN NOIR */
+        h1 { 
+            font-family: "Tempus Sans ITC", "Tempus Sans", cursive, sans-serif; 
+            font-weight: 400; 
+            font-size: 3.5rem; 
+            margin-bottom: 2rem; 
+            letter-spacing: 0.1rem; 
+            text-align: center; 
+            text-transform: none; 
+            color: #000000; 
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8); 
+        }
+
+        /* CADRE POUR LE TEXTE DE DESCRIPTION (FOND CLAIR) */
+        .description-container {
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.85); /* Fond blanc semi-transparent */
+            padding: 3rem; 
+            border: 1px solid rgba(0, 0, 0, 0.15); 
+            box-shadow: 10px 10px 30px rgba(0,0,0,0.15); 
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 3rem;
+            align-self: center; 
+        }
+
+        /* STYLE POUR L'IMAGE INTÉGRÉE */
+        .image-oracle {
+            max-width: 100%;
+            height: auto;
+            width: 350px; /* Taille de l'image ajustable selon vos souhaits */
+            margin: 0 auto 2.5rem auto; /* Centre l'image et ajoute de l'espace en dessous */
+            display: block;
+            border-radius: 4px; /* Coins légèrement arrondis pour la douceur */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner du relief */
+        }
+
+        /* TEXTE EN NOIR */
+        .description-container p {
+            font-size: 1.25rem; 
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #000000;
+            opacity: 0.95;
+        }
+
+        /* ACCROCHE PRINCIPALE */
+        .tagline {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem; 
+            font-weight: 700;
+            color: #b58239; 
+            margin-bottom: 2rem;
+            letter-spacing: 0.05rem;
+        }
+
+        /* ZONE BOUTON CONTACT (CTA) */
+        .cta-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-contact {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.05);
+            border: 1px solid #000000;
+            color: #000000;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-contact:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* BOUTON RETOUR EN NOIR */
+        .btn-retour { 
+            margin-top: 2rem; 
+            color: #000000; 
+            text-decoration: none; 
+            font-family: 'Cinzel', serif; 
+            font-size: 0.8rem; 
+            border-bottom: 1px solid #000000; 
+            padding-bottom: 2px; 
+            opacity: 0.8; 
+            transition: 0.3s; 
+        }
+        .btn-retour:hover { opacity: 1; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .description-container { padding: 1.5rem; }
+            .description-container p { font-size: 1.1rem; } 
+            .tagline { font-size: 1.15rem; }
+            .image-oracle { width: 80%; margin-bottom: 1.5rem; } /* S'adapte sur mobile */
+        }
+    </style>
+</head>
+<body>
+    <div class="fond-site">
+        <h1>L'Oracle</h1>
+
+        <div class="description-container">
+            <div class="tagline">L’écrin du bien-être professionnel</div>
+            
+            <img src="oracle.jpg" alt="L'Oracle" class="image-oracle">
+
+            <p>
+                L’Oracle qui vous permet de devenir acteur de votre qualité de vie au travail.
+            </p>
+            <p>
+                Responsable prévention des risques professionnels de carrière ayant vécu un burn-out et énergéticienne de passion, j’ai côtoyé beaucoup de personnes en mal-être professionnel qui se sentaient démunies et ne trouvaient pas de réponses dans les politiques « Prévention des risques psychosociaux » de leurs employeurs.
+            </p>
+            <p>
+                Pourquoi ? Parce que le bien-être au travail, ce n’est pas qu’une politique globale d’entreprise, c’est aussi un parcours personnel visant à s’aligner avec son travail.
+            </p>
+            <p>
+                C’est pour cela que j’ai créé cet oracle spécifiquement dédié à nos vies professionnelles. Il est conçu comme un outil de développement à destination des personnes en perte de sens, en burn-out ou en transition professionnelle afin de les accompagner sur le chemin de l’épanouissement au travail.
+            </p>
+            <p>
+                Ce jeu est une boussole qui vous guide chaque jour sur le chemin du bien-être professionnel, mais n’oubliez pas que vous êtes votre propre lumière et le seul décideer.
+            </p>
+
+            <div class="cta-section">
+                <p style="font-style: normal; font-size: 1.25rem; margin-bottom: 2rem; color: #000000;">
+                    Vous souhaitez qu'il vous accompagne au quotidien, contactez nous pour les tarifs.
+                </p>
+                <a href="contact.html?message=Tarif%20pour%20l'Oracle%20%22L'écrin%20du%20bien-être%20professionnel%22" class="btn-contact">Nous contacter</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-retour">RETOUR À L'ACCUEIL</a>
+    </div>
+</body>
+</html>
