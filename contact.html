@@ -31,6 +31,11 @@
             </div>
 
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                
+                <input type="hidden" name="access_key" value="f8aafa5f-1f5f-434c-9e5c-3993ea8c5d6f">
+                
+                <input type="hidden" name="redirect" value="https://votre-site.com/index.html">
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-[10px] uppercase tracking-widest text-stone-400 mb-2 font-bold">Nom</label>
@@ -75,17 +80,14 @@
                 const dateAtelier = urlParams.get('date');
                 const ref = urlParams.get('ref');
                 const objet = urlParams.get('objet');
-                const messageUrl = urlParams.get('message'); // Récupère le texte de l'Oracle
+                const messageUrl = urlParams.get('message'); 
 
-                // 0. Cas TEXTE PRÉDÉFINI (depuis page Oracle)
                 if (messageUrl) {
                     champMessage.value = messageUrl;
                 }
-                // 1. Ateliers
                 else if (typeAtelier && dateAtelier) {
                     champMessage.value = "Inscription pour " + typeAtelier + " le " + dateAtelier + "\nNombre de personnes : ";
                 } 
-                // 2. Produits (pendules/baguettes)
                 else if (ref) {
                     if (ref.toLowerCase().includes("baguettes")) {
                         champMessage.value = ref + " : ";
@@ -93,11 +95,9 @@
                         champMessage.value = "Commande du pendule n°" + ref + " : ";
                     }
                 }
-                // 3. Cas GÉOBIOLOGIE (depuis page géobiologie)
                 else if (objet === 'geobiologie') {
                     champMessage.value = "Contact pour Géobiologie : ";
                 }
-                // 4. Cas QUI SUIS-JE (depuis présentation_s)
                 else if (objet === 'perso') {
                     champMessage.value = "Contact outil personnalisé ou géobiologie? ";
                 }
